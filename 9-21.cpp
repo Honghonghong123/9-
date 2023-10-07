@@ -1,22 +1,27 @@
-#include <bits/stdc++.h>
-using namespace std;
-
+//#include <bits/stdc++.h>
+//using namespace std;
+//
 //int main()
 //{
 //	//求最大公因数和最小公倍数
 //	//一  输入两个数
-//	int  divisor,dividend;
-//	scanf("%d%d", &dividend, &divisor);
-//	int t = divisor;
-//	int p = dividend;
-//	//二 利用 欧几里得算法 
-//	while(dividend % divisor != 0)
+//	int  divisor,dividend,a,t,p,row;
+//	scanf("%d",&row);
+//	while(row--)
 //	{
-//		divisor = dividend % divisor;
-//		dividend = t;
+//		scanf("%d%d", &dividend, &divisor);
+//		t = a = divisor;
+//		p = dividend;
+//		//二 利用 欧几里得算法 
+//		while(dividend % divisor != 0)
+//		{
+//			divisor = dividend % divisor;
+//			dividend = t;
+//			t = divisor;
+//		}
+//		printf("%d ",divisor);
+//		printf("%d\n",a*p/divisor);
 //	}
-//	printf("%d\n",divisor);
-//	printf("%d\n",t*p/divisor);
 //	return 0;
 //}
 
@@ -97,13 +102,12 @@ using namespace std;
 //	return 0;
 //}
 
-
-//计算规律下落 
+////计算规律下落 
 //int main()
 //{
 ////	一球从M米高度自由下落，每次落地后返回原高度的一半，再落下
 //	int m, n;
-//	double hight , len;10
+//	double hight , len;
 //	scanf("%d%d",&m,&n);
 //	hight = m*pow(0.5,n);
 //	len = m*(1-pow(0.5,n))/0.5+ m/2*(1-pow(0.5,n))/0.5 - hight;
@@ -112,29 +116,93 @@ using namespace std;
 //	return 0 ;
 //}
 
-int monkey(int day)
-{
-	int i = 1;
-	int sum = 1;
-	for(i=1;i<day;i++)
-	{
-		sum = (sum + 1) * 2;
-	}
-	return sum;		
-}
-int main()
-{
-//	第一天摘下若干个桃子，当即吃了一半加一个
+
+//猴子吃桃问题 //	第一天摘下若干个桃子，当即吃了一半加一个
 //	以后每天早上都吃了前一天剩下的一半零一个
 //	第N天早上想再吃时，见只剩下一个桃子了。求第一天共摘多少桃子
-	int day;
-	scanf("%d",&day);
-	printf("%d\n",monkey(day));
-	return 0;
-}
+
+//int monkey(int day)
+//{
+//	int i = 1;
+//	int sum = 1;
+//	for(i=1;i<day;i++)
+//	{
+//		sum = (sum + 1) * 2;
+//	}
+//	return sum;		
+//}
+//int main()
+//{
+//	int day, row;
+//	scanf("%d",&row);
+//	while(row--)
+//	{
+//		scanf("%d",&day);
+//		printf("%d\n",monkey(day));	
+//	}
+//
+//	return 0;
+//}
 
 
-
+//int main()
+//{
+//	int n,a,b,a1,b1;
+//	scanf("%d",&n);
+//	a=1;
+//	b=(n-1)/2;
+//	while(a!=n)
+//	{
+//		a1=a;
+//		b1=b;
+//		while(b1--)
+//		{
+//			printf("_");
+//		}
+//		while(a1--)
+//		{
+//			printf("*");
+//		}
+//		b1=b;
+//		while(b1--)
+//		{
+//			printf("_");
+//		}
+//		a += 2;
+//		b--;
+//		printf("\n");
+//	}
+//	a1=a;
+//	while(a1--)
+//	{
+//		printf("*");
+//	}
+//	printf("\n");
+//	a -=2;
+//	b++;
+//	while(a!= -1)
+//	{
+//		a1=a;
+//		b1=b;
+//		while(b1--)
+//		{
+//			printf("_");
+//		}
+//		while(a1--)
+//		{
+//			printf("*");
+//		}
+//		b1=b;
+//		while(b1--)
+//		{
+//			printf("_");
+//		}
+//		a -= 2;
+//		b++;
+//		printf("\n");
+//	}	
+//	return 0;
+//}
 
 
 
